@@ -105,7 +105,7 @@ table {
   border-spacing: 0;
 }
 
-header, footer, section {
+header, footer, section, nav {
   display: block;
   position: relative;
 }
@@ -188,7 +188,7 @@ header h1 {
 
 header h2 {
   background-color: #7c334f;
-  font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
+  font: bold italic .85em/1.5 Georgia, Times, "Times New Roman", serif;
   color: #e69b95;
   padding-bottom: 14px;
   margin-top: -3px;
@@ -235,7 +235,7 @@ section#downloads a:hover {
 }
 
 section#downloads a em {
-  font: bold italic 12px/1 Georgia, Times, “Times New Roman”, serif;
+  font: bold italic 12px/1 Georgia, Times, "Times New Roman", serif;
   color: #83b7da;
   display: block;
 }
@@ -259,12 +259,34 @@ section#downloads a.tgz:hover {
 }
 
 span.banner-fix {
-  background: transparent url(../images/download-fallback-bg.png) center top no-repeat;
-  display: block;
-  height: 19px;
-  position: absolute;
-  width: 670px;
-  top: 19px;
+    background: transparent url(../images/download-fallback-bg.png) center top no-repeat;
+    display: block;
+    height: 19px;
+    position: absolute;
+    width: 670px;
+    top: 19px;
+}
+
+nav#main_menu {
+    z-index: 2;
+    padding: 20px 82px 0;
+    min-height:50px;
+    font-size: large;
+}
+
+nav#main_menu a {
+    padding: 3px 46px;
+    font-weight: bold;
+}
+
+nav#main_menu a:hover {
+    background: #7c334f;
+    color: #ece4d8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px 46px;
+    margin: 0;
 }
 
 section#main_content {
@@ -313,7 +335,7 @@ footer span.ribbon-inner p {
   background-color: #7c334f;
   margin: 0;
   color: #e69b95;
-  font: bold italic 12px/1 Georgia, Times, “Times New Roman”, serif;
+  font: bold italic 12px/1 Georgia, Times, "Times New Roman", serif;
   padding-bottom:4px;
 }
 
@@ -365,7 +387,7 @@ footer span.octocat {
 
 body {
   background: #ece4d8;
-  font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
+  font: normal normal 15px/1.5 Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   color: #544943;
   -webkit-font-smoothing: antialiased;
 }
