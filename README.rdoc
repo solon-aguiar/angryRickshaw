@@ -1,6 +1,6 @@
 =Angry Rickshaw Project
 
 - If you want know more about the project go to http://tinyurl.com/angry-rickshaw
-- If you need some technical help visit our Wiki
+- If you need some technical help visit our Wiki http://tinyurl.com/angry-rickshaw-wiki
 
 Angry Rickshaw Team
