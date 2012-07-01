@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+#ignore RubyMine configuration files
+.idea
+
+#ignore jekyll local deploy folder
+_site
