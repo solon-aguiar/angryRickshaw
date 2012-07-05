@@ -1,0 +1,21 @@
+#rate h2{
+	margin-bottom: 2px;
+}
+
+#rate ul{
+	padding-left: 0px;
+	list-style: none;
+}
+
+#rate h3{
+	margin-left: 0px;
+}
+
+#rate li{
+	margin-left: 20px;
+}
+
+input{
+	margin-left: 8px;
+	margin-right: 8px;
+}
