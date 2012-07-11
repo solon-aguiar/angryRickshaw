@@ -1,21 +1,60 @@
-#rate h2{
-	margin-bottom: 2px;
-}
-
-#rate ul{
+#otherCurrency ul, #otherToInr ul, #indianRupee ul, #inrToOther ul{
 	padding-left: 0px;
 	list-style: none;
 }
 
-#rate h3{
-	margin-left: 0px;
+#otherToInr ul{
+    text-align: right;
 }
 
-#rate li{
-	margin-left: 20px;
+#otherToInr li, #inrToOther li{
+    margin-left: 10px;
+}
+
+li{
+    margin-bottom: 3px;
+}
+#inrToOther{
+    position: absolute;
+    top: 25%;
+    left: 68%;
+    float: left;
+}
+
+#indianRupee {
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    float: left;
+    text-align: right;
+}
+
+#otherToInr{
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    float: left;
+}
+
+#otherCurrency{
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    float: left;
+    text-align: right;
 }
 
 input{
-	margin-left: 8px;
-	margin-right: 8px;
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    left: 25%;
+    font-size: 20pt;
+    text-align: center;
+}
+
+#timestamp{
+    position: absolute;
+    left: 38%;
+    top: 60%;
 }

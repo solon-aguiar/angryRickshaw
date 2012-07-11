@@ -39,6 +39,7 @@ $(document).ready(function(){
 		usdToInr = inr/usd
 
 		renderToRupee()
+        renderFromRupee()
 	}
 
 	var getTimestamp = function(data){
@@ -55,38 +56,49 @@ $(document).ready(function(){
 	}
 
 	var renderToRupee = function(){
-		$("#rate ul").html("")
-		$("#rate ul").append("<h2>" + amount +"</h2>")
-		$("#rate ul").append("<li>Australian Dollar = " + toRupee(audToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>Brazilian Real = " + toRupee(brlToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>Canadian Dollar = " + toRupee(cadToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>Chinese Yuan = " + toRupee(cnyToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>Euro = " + toRupee(eurToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>British Pound = " + toRupee(gbpToInr).toFixed(2) + " Indian Rupee </li>")
-		$("#rate ul").append("<li>US Dollar = " + toRupee(usdToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").html("")
+		$("#otherToInr ul").append("<li>" + toRupee(audToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(brlToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(cadToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(cnyToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(eurToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(gbpToInr).toFixed(2) + " Indian Rupee </li>")
+		$("#otherToInr ul").append("<li>" + toRupee(usdToInr).toFixed(2) + " Indian Rupee </li>")
+
+        $("#otherCurrency ul").html("")
+        $("#otherCurrency ul").append("<li>Australian Dollar = </li>")
+        $("#otherCurrency ul").append("<li>Brazilian Real = </li>")
+        $("#otherCurrency ul").append("<li>Canadian Dollar = </li>")
+        $("#otherCurrency ul").append("<li>Chinese Yuan = </li>")
+        $("#otherCurrency ul").append("<li>Euro = </li>")
+        $("#otherCurrency ul").append("<li>British Pound = </li>")
+        $("#otherCurrency ul").append("<li>US Dollar = </li>")
 	}
 
 	var renderFromRupee = function(){
-		$("#rate ul").html("")
-		$("#rate ul").append("<h2>" + amount +"</h2>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(audToInr).toFixed(2) + " Australian Dollars </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(brlToInr).toFixed(2) + " Brazilian Real </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(cadToInr).toFixed(2) + " Canadian Dollar </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(cnyToInr).toFixed(2) + " Chinese Yuan </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(eurToInr).toFixed(2) + " Euro </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(gbpToInr).toFixed(2) + " British Pound </li>")
-		$("#rate ul").append("<li>Indian Rupee = " + fromRupee(usdToInr).toFixed(2) + " US Dollar </li>")
+		$("#inrToOther ul").html("")
+		$("#inrToOther ul").append("<li>" + fromRupee(audToInr).toFixed(2) + " Australian Dollars </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(brlToInr).toFixed(2) + " Brazilian Real </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(cadToInr).toFixed(2) + " Canadian Dollar </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(cnyToInr).toFixed(2) + " Chinese Yuan </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(eurToInr).toFixed(2) + " Euro </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(gbpToInr).toFixed(2) + " British Pound </li>")
+		$("#inrToOther ul").append("<li>" + fromRupee(usdToInr).toFixed(2) + " US Dollar </li>")
+
+        $("#indianRupee ul").html("")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
 	}
 
-	$("#yours").bind("input", function(){
-		var value = $("#yours").val()
+	$("#amount").bind("input", function(){
+		var value = $("#amount").val()
 		amount = (value && !isNaN(value) && parseFloat(value) > 0)  ? value : 1
 		renderToRupee()
-	})
-
-	$("#rupee").bind("input", function(){
-		var value = $("#rupee").val()
-		amount = (value && !isNaN(value) && parseFloat(value) > 0)  ? value : 1
-		renderFromRupee()
+        renderFromRupee()
 	})
 })
