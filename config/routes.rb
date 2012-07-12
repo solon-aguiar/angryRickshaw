@@ -1,4 +1,6 @@
 AngryRickshaw::Application.routes.draw do
+  get "activity/activities"
+
   get "map/map"
 
   get "about/about"
