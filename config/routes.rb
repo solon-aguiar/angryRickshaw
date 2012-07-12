@@ -1,4 +1,6 @@
 AngryRickshaw::Application.routes.draw do
+  get "currency_exchange/currencyExchange"
+
   get "activity/activities"
 
   get "map/map"
