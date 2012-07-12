@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "AngryRickshaws" do
+describe "Menu Bar" do
 
   describe "Home page" do
     it "should show navigation bar" do
