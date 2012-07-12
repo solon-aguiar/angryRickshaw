@@ -1,4 +1,6 @@
 AngryRickshaw::Application.routes.draw do
+  get "about/about"
+
   get "home/home"
 
   # The priority is based upon order of creation:
