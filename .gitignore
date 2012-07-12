@@ -19,3 +19,7 @@
 
 #ignore jekyll local deploy folder
 _site
+
+#ignore other things
+.DS_Store
+.rspec
