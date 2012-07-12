@@ -18,7 +18,5 @@ class MyTest < Test::Unit::TestCase
   # Fake test
   def test_fail
 
-    # To change this template use File | Settings | File Templates.
-    fail("Not implemented")
   end
 end
