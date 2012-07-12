@@ -1,13 +1,11 @@
 AngryRickshaw::Application.routes.draw do
-  get "currency_exchange/currencyExchange"
 
-  get "activity/activities"
+  root to: "home#home"
+  match "/map", to: "map#map"
+  match "/currency", to: "currency_exchange#currencyExchange"
+  match "/activity", to: "activity#activities"
+  match "/about", to: "about#about"
 
-  get "map/map"
-
-  get "about/about"
-
-  get "home/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
