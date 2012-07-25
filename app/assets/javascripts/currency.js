@@ -18,6 +18,7 @@ $(document).ready(function () {
     var eurToInr;
     var gbpToInr;
     var usdToInr;
+    var zarToInr;
 
     var calculateRate = function (data) {
         var aud = data["rates"]["AUD"];
@@ -28,6 +29,7 @@ $(document).ready(function () {
         var gbp = data["rates"]["GBP"];
         var inr = data["rates"]["INR"];
         var usd = data["rates"]["USD"];
+        var zar = data["rates"]["ZAR"];
 
         audToInr = inr / aud;
         brlToInr = inr / brl;
@@ -36,6 +38,7 @@ $(document).ready(function () {
         eurToInr = inr / eur;
         gbpToInr = inr / gbp;
         usdToInr = inr / usd;
+        zarToInr = inr / zar;
 
         renderToRupee();
         renderFromRupee()
@@ -63,6 +66,7 @@ $(document).ready(function () {
         $("#otherToInr ul").append("<li>" + toRupee(eurToInr).toFixed(2) + " Indian Rupee </li>");
         $("#otherToInr ul").append("<li>" + toRupee(gbpToInr).toFixed(2) + " Indian Rupee </li>");
         $("#otherToInr ul").append("<li>" + toRupee(usdToInr).toFixed(2) + " Indian Rupee </li>");
+        $("#otherToInr ul").append("<li>" + toRupee(zarToInr).toFixed(2) + " Indian Rupee </li>");
 
         $("#otherCurrency ul").html("");
         $("#otherCurrency ul").append("<li>Australian Dollar = </li>");
@@ -72,6 +76,7 @@ $(document).ready(function () {
         $("#otherCurrency ul").append("<li>Euro = </li>");
         $("#otherCurrency ul").append("<li>British Pound = </li>");
         $("#otherCurrency ul").append("<li>US Dollar = </li>");
+        $("#otherCurrency ul").append("<li>South African Rand = </li>")
     };
 
     var renderFromRupee = function () {
@@ -83,8 +88,10 @@ $(document).ready(function () {
         $("#inrToOther ul").append("<li>" + fromRupee(eurToInr).toFixed(2) + " Euro </li>");
         $("#inrToOther ul").append("<li>" + fromRupee(gbpToInr).toFixed(2) + " British Pound </li>");
         $("#inrToOther ul").append("<li>" + fromRupee(usdToInr).toFixed(2) + " US Dollar </li>");
+        $("#inrToOther ul").append("<li>" + fromRupee(zarToInr).toFixed(2) + " South African Rand </li>");
 
         $("#indianRupee ul").html("");
+        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
         $("#indianRupee ul").append("<li>Indian Rupee = </li>");
         $("#indianRupee ul").append("<li>Indian Rupee = </li>");
         $("#indianRupee ul").append("<li>Indian Rupee = </li>");
