@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    $("#yours").val("")
-    $("#rupee").val("")
+    $("#amount").val("")
 
     $.ajax({
         url:"http://openexchangerates.org/latest.json",
