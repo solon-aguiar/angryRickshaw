@@ -17,7 +17,7 @@ li {
 
 #inrToOther, #indianRupee, #otherToInr, #otherCurrency {
     position: absolute;
-    top: 40%;
+    top: 260px;
     float: left;
 }
 
@@ -41,16 +41,17 @@ li {
 
 #other, #india {
     position: absolute;
-    top: 35%;
-    float: left;
+    top: 220px;
+    float: right;
+    text-align: right;
 }
 
 #other {
-    left: 26%;
+    right: 73%;
 }
 
 #india {
-    left: 66%;
+    right: 33%;
 }
 
 input {
@@ -58,7 +59,7 @@ input {
     height: 50px;
     position: absolute;
     left: 25%;
-    top: 20%;
+    top: 150px;
     font-size: 20pt;
     text-align: center;
 }
@@ -66,5 +67,5 @@ input {
 #timestamp {
     position: absolute;
     left: 38%;
-    top: 80%;
+    top: 500px;
 }
