@@ -1,84 +1,11 @@
 <h1>Activities</h1>
-<table border="1" style="border-collapse: collapse;" width="60%">
-  <tr>
-    <th>Restaurant</th>
-    <th>Shopping Centre</th>
-    <th>Pub</th>
-    <th>Night Club</th>
-    <th>Games</th>
-    <th>Tourist</th>
-    <th>Apartment</th>
-  </tr>
-  <tr>
-    <td>Java</td>
-    <td>Commercial Street</td>
-    <td>Toits</td>
-    <td>Hint</td>
-    <td>Paint Ball</td>
-    <td>Hampi</td>
-    <td>Diamond District</td>
-  </tr>
-  <tr>
-    <td>China Pearl</td>
-    <td>100 Feet Road</td>
-    <td>The Biere Club</td>
-    <td>Ubi Sky</td>
-    <td>Amoeba</td>
-    <td>Mysore</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Toits</td>
-    <td>Forum</td>
-    <td>Hard Rock Cafe</td>
-    <td></td>
-    <td></td>
-    <td>Shiva Temple</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>BBQ Nation</td>
-    <td>UB City</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Guruduwara</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Mainland China</td>
-    <td>Total</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>California Pizza</td>
-    <td>MG Road</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Mercure</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Lilla Palace</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+<% @activities.group_by(&:category).each do |category, activityList| %>
+    <ul>
+      <li><%= category %></li>
+      <ol>
+        <% activityList.each do |activity| %>
+            <li><%= activity.name %></li>
+        <% end %>
+      </ol>
+    </ul>
+<% end %>
