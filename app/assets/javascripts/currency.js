@@ -101,10 +101,22 @@ $(document).ready(function () {
         $("#indianRupee ul").append("<li>Indian Rupee = </li>")
     };
 
+    var renderMoney = function () {
+        $("#note").html("");
+        if (amount < 30) {
+            $("#note").append("<img src='currency/Stephen_Money.jpg'/>");
+        } else if(amount < 500) {
+            $("#note").append("<img src='currency/Ruoran_Money.jpg'/>");
+        } else{
+            $("#note").append("<img src='currency/Solon_Money.jpg'/>");
+        }
+    };
+
     $("#amount").bind("input", function () {
         var value = $("#amount").val();
         amount = (value && !isNaN(value) && parseFloat(value) > 0) ? value : 1;
         renderToRupee();
-        renderFromRupee()
+        renderFromRupee();
+        renderMoney()
     })
 });
