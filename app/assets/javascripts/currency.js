@@ -104,8 +104,6 @@ $(document).ready(function () {
     $("#amount").bind("input", function () {
         var value = $("#amount").val();
         amount = (value && !isNaN(value) && parseFloat(value) > 0) ? value : 1;
-        $("#other").text(amount);
-        $("#india").text(amount);
         renderToRupee();
         renderFromRupee()
     })

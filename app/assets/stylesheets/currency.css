@@ -1,71 +1,66 @@
+#note {
+    width: 700px;
+}
+
 #otherCurrency ul, #otherToInr ul, #indianRupee ul, #inrToOther ul {
     padding-left: 0px;
     list-style: none;
-}
-
-#otherToInr ul {
-    text-align: right;
-}
-
-#otherToInr li, #inrToOther li {
-    margin-left: 10px;
 }
 
 li {
     margin-bottom: 3px;
 }
 
-#inrToOther, #indianRupee, #otherToInr, #otherCurrency {
-    position: absolute;
-    top: 260px;
-    float: left;
-}
-
 #otherCurrency {
-    left: 17%;
     text-align: right;
 }
 
 #otherToInr {
-    left: 28%;
+    text-align: right;
 }
 
 #indianRupee {
-    left: 60%;
-    text-align: right;
+    float: right;
 }
 
 #inrToOther {
-    left: 68%;
-}
-
-#other, #india {
-    position: absolute;
-    top: 220px;
     float: right;
-    text-align: right;
 }
 
-#other {
-    right: 73%;
-}
-
-#india {
-    right: 33%;
-}
-
-input {
-    width: 50%;
+#amount {
+    width: 600px;
     height: 50px;
     position: absolute;
-    left: 25%;
+    left: 100px;
     top: 150px;
     font-size: 20pt;
     text-align: center;
+    z-index: 999;
 }
 
 #timestamp {
-    position: absolute;
-    left: 38%;
-    top: 500px;
+    position: relative;
+    width: 800px;
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+#amount-container {
+    width: 800px;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+#exchange-container {
+    width: 1000px;
+    margin: 80px auto 0;
+}
+
+.content-section {
+    padding-left: 10px;
+    float: left;
+}
+
+.clear {
+    clear: both;
 }
