@@ -20,5 +20,5 @@ function changeMenuImageWithExtension(menuItem, extension) {
     var menuText = menuItem.src.split("/");
     var folderName = menuText[menuText.length-2];
 
-    menuItem.src = "/assets/menubar/" + folderName + "/" + folderName + extension;
+    menuItem.src = "assets/menubar/" + folderName + "/" + folderName + extension;
 }

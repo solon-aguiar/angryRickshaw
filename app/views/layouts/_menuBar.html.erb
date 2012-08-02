@@ -1,9 +1,9 @@
 <nav>
   <div align="center">
-    <%= link_to image_tag("menubar/Home/Home.svg", class: "menuBar"), root_path %>
-    <%= link_to image_tag("menubar/Maps/Maps.svg", class: "menuBar"), map_path %>
-    <%= link_to image_tag("menubar/Activities/Activities.svg", class: "menuBar"), activity_path %>
-    <%= link_to image_tag("menubar/Currency/Currency.svg", class: "menuBar"), currency_path %>
-    <%= link_to image_tag("menubar/About/About.svg", class: "menuBar"), about_path %>
+    <a href="<%= root_path %>"><img alt="Home" class="menuBar" src="assets/menuBar/Home/Home.svg" /></a>
+    <a href="<%= map_path %>"><img alt="Map" class="menuBar" src="assets/menuBar/Maps/Maps.svg" /></a>
+    <a href="<%= activity_path %>"><img alt="Activity" class="menuBar" src="assets/menuBar/Activities/Activities.svg" /></a>
+    <a href="<%= currency_path %>"><img alt="Currency" class="menuBar" src="assets/menuBar/Currency/Currency.svg" /></a>
+    <a href="<%= about_path %>"><img alt="About" class="menuBar" src="assets/menuBar/About/About.svg" /></a>
   </div>
 </nav>
