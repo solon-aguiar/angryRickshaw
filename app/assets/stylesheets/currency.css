@@ -32,7 +32,7 @@ li {
     height: 50px;
     position: absolute;
     left: 100px;
-    top: 150px;
+    top: 250px;
     font-size: 20pt;
     text-align: center;
     z-index: 999;
@@ -47,7 +47,7 @@ li {
 
 #amount-container {
     width: 800px;
-    margin: 20px auto 0;
+    margin: 0 auto 0;
     position: relative;
 }
 
@@ -63,4 +63,8 @@ li {
 
 .clear {
     clear: both;
+}
+
+.note {
+    display: none;
 }

@@ -41,7 +41,8 @@ $(document).ready(function () {
         zarToInr = inr / zar;
 
         renderToRupee();
-        renderFromRupee()
+        renderFromRupee();
+        renderMoney()
     };
 
     var getTimestamp = function (data) {
@@ -102,13 +103,23 @@ $(document).ready(function () {
     };
 
     var renderMoney = function () {
-        $("#note").html("");
-        if (amount < 30) {
-            $("#note").append("<img src='currency/Stephen_Money.jpg'/>");
-        } else if(amount < 500) {
-            $("#note").append("<img src='currency/Ruoran_Money.jpg'/>");
-        } else{
-            $("#note").append("<img src='currency/Solon_Money.jpg'/>");
+        $(".note").hide();
+        if (amount < 3) {
+            $("#johannes").show();
+        } else if (amount < 10) {
+            $("#ste").show();
+        } else if (amount < 30) {
+            $("#greg").show();
+        } else if (amount < 80) {
+            $("#jr").show();
+        } else if (amount < 500) {
+            $("#ruoran").show();
+        } else if (amount < 2000) {
+            $("#solon").show();
+        } else if (amount < 200000) {
+            $("#erlangga").show();
+        } else {
+            $("#mewan").show();
         }
     };
 
