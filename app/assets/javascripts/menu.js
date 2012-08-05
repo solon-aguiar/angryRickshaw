@@ -1,24 +1,21 @@
 $(document).ready(function () {
-    $(".menuBar").bind("mouseover", function(){
-        changeMenuImageWithExtension($(this)[0], "_up.svg");
+    $(".menuBar").bind("mouseover mouseup", function(){
+        changeMenuImage($(this), "_up");
     });
 
     $(".menuBar").bind("mousedown", function(){
-        changeMenuImageWithExtension($(this)[0], "_dn.svg");
-    });
-
-    $(".menuBar").bind("mouseup", function(){
-        changeMenuImageWithExtension($(this)[0], "_up.svg");
+        changeMenuImage($(this), "_dn");
     });
 
     $(".menuBar").bind("mouseout", function(){
-        changeMenuImageWithExtension($(this)[0], ".svg");
+        changeMenuImage($(this), "");
     });
 });
 
-function changeMenuImageWithExtension(menuItem, extension) {
-    var menuText = menuItem.src.split("/");
-    var folderName = menuText[menuText.length-2];
+function changeMenuImage(menuItem, extension) {
+    var menuClasses = menuItem.attr("class").split(" ");
+    var menuClass = menuClasses[1].split("-");
+    var menuName = menuClass[0];
 
-    menuItem.src = "assets/menubar/" + folderName + "/" + folderName + extension;
+    menuItem.removeClass(menuClasses[1]).addClass(menuName + "-" + menuName + extension);
 }

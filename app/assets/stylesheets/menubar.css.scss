@@ -1,0 +1,10 @@
+@import "menubar/About/*.png";
+@import "menubar/Activities/*.png";
+@import "menubar/Currency/*.png";
+@import "menubar/Home/*.png";
+@import "menubar/Maps/*.png";
+@include all-About-sprites;
+@include all-Activities-sprites;
+@include all-Currency-sprites;
+@include all-Home-sprites;
+@include all-Maps-sprites;
