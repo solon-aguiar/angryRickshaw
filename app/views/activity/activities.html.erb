@@ -4,7 +4,7 @@
       <li><%= category %></li>
       <ol>
         <% activityList.each do |activity| %>
-            <li><%= activity.name %></li>
+            <li><%= link_to activity.name, {:controller => "activity", :action => "activity", :id => activity.id }%></li>
         <% end %>
       </ol>
     </ul>

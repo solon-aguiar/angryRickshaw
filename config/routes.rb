@@ -3,7 +3,8 @@ AngryRickshaw::Application.routes.draw do
   root to: "home#home"
   match "/map", to: "map#map"
   match "/currency", to: "currency_exchange#currencyExchange"
-  match "/activity", to: "activity#activities"
+  match "/activities", to: "activity#activities"
+  match "/activity/:id", to: "activity#activity"
   match "/about", to: "about#about"
 
 
