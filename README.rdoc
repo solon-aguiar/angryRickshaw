@@ -1,5 +1,7 @@
 =Angry Rickshaw Project
 
+Visit Angry Rickshaw from: http://angry-rickshaw.herokuapp.com
+
 - If you want know more about the project go to http://tinyurl.com/angry-rickshaw
 - If you need some technical help visit our Wiki http://tinyurl.com/angry-rickshaw-wiki
 
