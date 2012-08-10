@@ -125,7 +125,12 @@ $(document).ready(function () {
 
     $("#amount").bind("input", function () {
         var value = $("#amount").val();
-        amount = (value && !isNaN(value) && parseFloat(value) > 0) ? value : 1;
+        if (isNaN(value)) {
+            $("#amount").val(amount);
+        } else {
+            amount = (value && parseFloat(value) > 0) ? value : 1;
+        }
+
         renderToRupee();
         renderFromRupee();
         renderMoney()
