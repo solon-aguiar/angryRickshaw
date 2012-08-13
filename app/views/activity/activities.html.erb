@@ -1,14 +1,22 @@
 <br /><br />
 <div align="center">
   <input id="activityText" type="text" />
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Rating</th>
+    </tr>
+    <% @activities.each do |activity| %>
+        <tr>
+          <td><%= activity.name %></td>
+          <td><%= activity.category %></td>
+          <td>Location here....</td>
+          <td><%= activity.description %></td>
+          <td>Rating here...</td>
+        </tr>
+    <% end %>
+  </table>
 </div>
-<% @activities.group_by(&:category).each do |category, activityList| %>
-    <ul>
-      <li><%= category %></li>
-      <ol>
-        <% activityList.each do |activity| %>
-            <li><%= link_to activity.name, {:controller => "activity", :action => "activity", :id => activity.id }%></li>
-        <% end %>
-      </ol>
-    </ul>
-<% end %>
