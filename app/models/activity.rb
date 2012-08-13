@@ -1,3 +1,3 @@
 class Activity < ActiveRecord::Base
-  attr_accessible :name, :category, :description
+  attr_accessible :name, :category, :description, :location
 end
