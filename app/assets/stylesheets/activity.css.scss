@@ -8,3 +8,27 @@
   text-align: center;
   z-index: 999;
 }
+
+#activitiesTable {
+  td, th {
+    width: 250px;
+    height: 80px;
+    background-color: #57CDFA;
+  }
+
+  th {
+    color: white;
+    font-size: 20pt;
+    text-align: left;
+    vertical-align: top;
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+
+  td {
+    font-size: 15pt;
+    text-indent: 10px;
+  }
+
+  border-spacing: 10px;
+}
