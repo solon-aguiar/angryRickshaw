@@ -1,3 +1,10 @@
 // Place all the styles related to the Activity controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#activityText {
+  width: 600px;
+  height: 50px;
+  font-size: 20pt;
+  text-align: center;
+  z-index: 999;
+}
