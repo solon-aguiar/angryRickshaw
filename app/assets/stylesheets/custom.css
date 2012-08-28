@@ -1,0 +1,45 @@
+body {
+    background-image: url("bg_enhance.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.thumb a:hover {
+    color: #ffffff;
+}
+
+.map-thumb {
+    color: #87ceeb;
+    background-color: #1e90ff;
+}
+
+.map-thumb:hover {
+    background-color: #00bfff;
+}
+
+.about-thumb {
+    color: #2e8b57;
+    background-color: #006400;
+}
+
+.about-thumb:hover {
+    background-color: #32cd32;
+}
+
+.currency-thumb {
+    color: #ff69b4;
+    background-color: #c71585;
+}
+
+.currency-thumb:hover {
+    background-color: #ff00ff;
+}
+
+.activities-thumb {
+    color: #a9a9a9;
+    background-color: orange;
+}
+
+.activities-thumb:hover {
+    background-color: #ffd700;
+}
