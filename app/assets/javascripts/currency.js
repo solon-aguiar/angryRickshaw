@@ -70,14 +70,19 @@ $(document).ready(function () {
         $("#otherToInr ul").append("<li>" + toRupee(zarToInr).toFixed(2) + " Indian Rupee </li>");
 
         $("#otherCurrency ul").html("");
-        $("#otherCurrency ul").append("<li>Australian Dollar = </li>");
-        $("#otherCurrency ul").append("<li>Brazilian Real = </li>");
-        $("#otherCurrency ul").append("<li>Canadian Dollar = </li>");
-        $("#otherCurrency ul").append("<li>Chinese Yuan = </li>");
-        $("#otherCurrency ul").append("<li>Euro = </li>");
-        $("#otherCurrency ul").append("<li>British Pound = </li>");
-        $("#otherCurrency ul").append("<li>US Dollar = </li>");
-        $("#otherCurrency ul").append("<li>South African Rand = </li>")
+        $("#otherCurrency ul").append("<li>Australian Dollar</li>");
+        $("#otherCurrency ul").append("<li>Brazilian Real</li>");
+        $("#otherCurrency ul").append("<li>Canadian Dollar</li>");
+        $("#otherCurrency ul").append("<li>Chinese Yuan</li>");
+        $("#otherCurrency ul").append("<li>Euro</li>");
+        $("#otherCurrency ul").append("<li>British Pound</li>");
+        $("#otherCurrency ul").append("<li>US Dollar</li>");
+        $("#otherCurrency ul").append("<li>South African Rand</li>");
+
+        $("#equalColumn2 ul").html("");
+        for( i = 0; i < 8; i++) {
+            $("#equalColumn2 ul").append("<li>=</li>");
+        }
     };
 
     var renderFromRupee = function () {
@@ -92,14 +97,13 @@ $(document).ready(function () {
         $("#inrToOther ul").append("<li>" + fromRupee(zarToInr).toFixed(2) + " South African Rand </li>");
 
         $("#indianRupee ul").html("");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>");
-        $("#indianRupee ul").append("<li>Indian Rupee = </li>")
+        $("#equalColumn1 ul").html("");
+        for( i = 0; i < 8; i++) {
+            $("#indianRupee ul").append("<li>Indian Rupee</li>");
+            $("#equalColumn1 ul").append("<li>=</li>");
+        }
+
+
     };
 
     var renderMoney = function () {

@@ -13,12 +13,14 @@
 			  <section class="main-section">
 				<div class="row-fluid">
 				  <div class="span8">
-					<h1>Angry Rickshaw</h1>
+					<%= link_to root_path do %>
+				  		<h1>Angry Rickshaw</h1>
+					<% end %>
 					<br />
 					<p>Hey gringo, get out of my land!!!</p>
 				  </div>
 				  <div class="span4">
-					<%= link_to image_tag("angry_rickshaw.png", :width => "240", :height => "220"), root_path %>
+					<%= link_to image_tag("angry_rickshaw.png", :width => "240", :height => "220", :class => "main-logo"), root_path %>
 				  </div>
 				</div>
 			  </section>

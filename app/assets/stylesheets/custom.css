@@ -55,8 +55,14 @@ section {
 .main-section {
     margin-top: 20px;
     padding: 40px 40px 40px 40px;
+    border: solid 1px lightgray;
 }
 
 .main-section h1 {
     font-size: 42pt;
+}
+
+.main-logo:hover {
+    border: solid 1px lightgray;
+    box-shadow: 5px 5px 5px 0px lightgray;
 }
