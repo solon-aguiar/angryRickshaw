@@ -1,2 +1,36 @@
-<h1>Home</h1>
-<p>This is home page</p>
+<li class="span8">
+
+
+  <%= link_to map_path, :class => "thumbnail" do %>
+	  <h2 style="margin-left: 20px;">Mapa</h2>
+	  <p style="margin-top: 20px; margin-left: 20px; margin-bottom: 20px; min-height: 40px;">hehehe</p>
+  <% end %>
+
+
+  <ul class="thumbnails" style="margin-top: 20px;">
+	<li class="span4">
+
+
+	  <%= link_to activities_path, :class => "thumbnail" do %>
+		  <h2 style="margin-left: 20px;">Activities</h2>
+		  <p style="margin-top: 20px; margin-left: 20px; margin-bottom: 20px; min-height: 40px;">hehehe</p>
+	  <% end %>
+
+	</li>
+	<li class="span4">
+	  <%= link_to about_path, :class => "thumbnail" do %>
+		  <h2 style="margin-left: 20px;">About Us</h2>
+		  <p style="margin-top: 20px; margin-left: 20px; margin-bottom: 20px; min-height: 40px;">hehehe</p>
+	  <% end %>
+	</li>
+  </ul>
+</li>
+<li class="span4">
+  <%= link_to currency_path, :class => "thumbnail" do %>
+	  <h2 style="margin-left: 20px;">Currency</h2>
+	  <p style="margin: 20px 20px 20px 20px; min-height: 200px; text-align: justify; text-justify: inter-word;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu nulla dui, non tristique libero.
+		Suspendisse mollis, nulla eget rhoncus pharetra, ipsum felis ultricies erat, at dignissim diam risus id dui.
+	  </p>
+  <% end %>
+</li>
