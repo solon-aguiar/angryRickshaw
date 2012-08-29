@@ -11,4 +11,6 @@
  *= require_self
  *= require_tree .
  *= require currency
+ *= require bootstrap
+ *= require custom
  */

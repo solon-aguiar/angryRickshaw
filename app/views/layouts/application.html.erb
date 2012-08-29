@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AngryRickshaw</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%=  render "layouts/menuBar" %>
-<%= yield %>
-
-</body>
+	<head>
+	  <title>AngryRickshaw</title>
+	  <%= stylesheet_link_tag "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="container">
+		  <ul class="thumbnails">
+			<li class="span12">
+					<%= link_to root_path do %>
+                <section class="main-section">
+                    <div class="row-fluid">
+                      <div class="span8">
+                          <h1>Angry Rickshaw</h1>
+                      <br />
+                      <p>Hey gringo, get out of my land!!!</p>
+                      </div>
+                      <div class="span4">
+                      <%= image_tag("angry_rickshaw.png", :width => "240", :height => "220") %>
+                      </div>
+                    </div>
+                </section>
+					<% end %>
+			</li>
+			<%= yield %>
+		  </ul>
+		</div>
+	</body>
 </html>

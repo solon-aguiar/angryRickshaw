@@ -1,23 +1,27 @@
-<br xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"/><br />
-<div align="center">
-  <input id="activityText" type="text" />
-  <br /><br /><br />
-  <table id="activitiesTable">
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Location</th>
-      <th>Description</th>
-      <th>Rating</th>
-    </tr>
-    <% @activities.each do |activity| %>
-        <tr>
-          <td><%= activity.name %></td>
-          <td><i><%= activity.category %></i></td>
-          <td><i><%= activity.location %></i></td>
-          <td><i><%= activity.description %></i></td>
-          <td><%= activity.rating %></td>
-        </tr>
-    <% end %>
-  </table>
-</div>
+<li class="span12">
+  <section>
+	<h2>Activities</h2>
+	<div align="center">
+	  <!--<input id="activityText" type="text" />-->
+	  <br/><br/><br/>
+	  <table id="activitiesTable">
+		<tr>
+		  <th>Name</th>
+		  <th>Type</th>
+		  <th>Location</th>
+		  <th>Description</th>
+		  <th>Rating</th>
+		</tr>
+		<% @activities.each do |activity| %>
+			<tr>
+			  <td><%= activity.name %></td>
+			  <td><i><%= activity.category %></i></td>
+			  <td><i><%= activity.location %></i></td>
+			  <td><i><%= activity.description %></i></td>
+			  <td><%= activity.rating %></td>
+			</tr>
+		<% end %>
+	  </table>
+	</div>
+  </section>
+</li>

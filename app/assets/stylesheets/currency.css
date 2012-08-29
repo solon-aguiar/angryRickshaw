@@ -2,7 +2,7 @@
     width: 800px;
 }
 
-#otherCurrency ul, #otherToInr ul, #indianRupee ul, #inrToOther ul {
+#otherCurrency ul, #otherToInr ul, #indianRupee ul, #inrToOther ul, #equalColumn1 ul, #equalColumn2 ul{
     padding-left: 0px;
     list-style: none;
 }
@@ -11,31 +11,11 @@ li {
     margin-bottom: 3px;
 }
 
-#otherCurrency {
-    text-align: right;
-}
-
-#otherToInr {
-    text-align: right;
-}
-
-#indianRupee {
-    float: right;
-}
-
-#inrToOther {
-    float: right;
-}
-
 #amount {
     width: 600px;
     height: 50px;
-    position: absolute;
-    left: 100px;
-    top: 250px;
     font-size: 20pt;
     text-align: center;
-    z-index: 999;
 }
 
 #timestamp {
@@ -47,18 +27,26 @@ li {
 
 #amount-container {
     width: 800px;
-    margin: 0 auto 0;
     position: relative;
+    text-align: center;
 }
 
-#exchange-container {
-    width: 1000px;
-    margin: 80px auto 0;
+#exchange-container div ul {
+    display: block;
+    text-align: left;
 }
 
-.content-section {
-    padding-left: 10px;
-    float: left;
+.custom-row div {
+    margin-top: 20px;
+}
+
+.custom-row div, .custom-note {
+    display: block;
+    text-align: center;
+}
+
+.first-section {
+    padding-left: 0px;
 }
 
 .clear {
