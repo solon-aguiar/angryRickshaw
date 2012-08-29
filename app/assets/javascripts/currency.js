@@ -59,51 +59,29 @@ $(document).ready(function () {
     };
 
     var renderToRupee = function () {
-        $("#otherToInr ul").html("");
-        $("#otherToInr ul").append("<li>" + toRupee(audToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(brlToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(cadToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(cnyToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(eurToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(gbpToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(usdToInr).toFixed(2) + " Indian Rupee </li>");
-        $("#otherToInr ul").append("<li>" + toRupee(zarToInr).toFixed(2) + " Indian Rupee </li>");
 
-        $("#otherCurrency ul").html("");
-        $("#otherCurrency ul").append("<li>Australian Dollar</li>");
-        $("#otherCurrency ul").append("<li>Brazilian Real</li>");
-        $("#otherCurrency ul").append("<li>Canadian Dollar</li>");
-        $("#otherCurrency ul").append("<li>Chinese Yuan</li>");
-        $("#otherCurrency ul").append("<li>Euro</li>");
-        $("#otherCurrency ul").append("<li>British Pound</li>");
-        $("#otherCurrency ul").append("<li>US Dollar</li>");
-        $("#otherCurrency ul").append("<li>South African Rand</li>");
-
-        $("#equalColumn2 ul").html("");
-        for( i = 0; i < 8; i++) {
-            $("#equalColumn2 ul").append("<li>=</li>");
-        }
+        $("#otherToRupees").html("")
+            .append("<tr><td>Australian Dollar</td><td>=</td><td class='valueColumn'>" + toRupee(audToInr).toFixed(2) + "</td><td class='currencyColumn'> Indian Rupee</td></tr>")
+            .append("<tr><td>Brazilian Real</td><td>=</td><td class='valueColumn'>" + toRupee(brlToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>Canadian Dollar</td><td>=</td><td class='valueColumn'>" + toRupee(cadToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>Chinese Yuan</td><td>=</td><td class='valueColumn'>" + toRupee(cnyToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>Euro</td><td>=</td><td class='valueColumn'>" + toRupee(eurToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>British Pound</td><td>=</td><td class='valueColumn'>" + toRupee(gbpToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>US Dollar</td><td>=</td><td class='valueColumn'>" + toRupee(usdToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>")
+            .append("<tr><td>South African Rand</td><td>=</td><td class='valueColumn'>" + toRupee(zarToInr).toFixed(2) + "</td><td class='currencyColumn'>Indian Rupee</td></tr>");
     };
 
     var renderFromRupee = function () {
-        $("#inrToOther ul").html("");
-        $("#inrToOther ul").append("<li>" + fromRupee(audToInr).toFixed(2) + " Australian Dollars </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(brlToInr).toFixed(2) + " Brazilian Real </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(cadToInr).toFixed(2) + " Canadian Dollar </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(cnyToInr).toFixed(2) + " Chinese Yuan </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(eurToInr).toFixed(2) + " Euro </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(gbpToInr).toFixed(2) + " British Pound </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(usdToInr).toFixed(2) + " US Dollar </li>");
-        $("#inrToOther ul").append("<li>" + fromRupee(zarToInr).toFixed(2) + " South African Rand </li>");
 
-        $("#indianRupee ul").html("");
-        $("#equalColumn1 ul").html("");
-        for( i = 0; i < 8; i++) {
-            $("#indianRupee ul").append("<li>Indian Rupee</li>");
-            $("#equalColumn1 ul").append("<li>=</li>");
-        }
-
-
+        $("#rupeesToOther").html("")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(audToInr).toFixed(2) + "</td><td class='currencyColumn'>Australian Dollars</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(brlToInr).toFixed(2) + "</td><td class='currencyColumn'>Brazilian Real</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(cadToInr).toFixed(2) + "</td><td class='currencyColumn'>Canadian Dollar</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(cnyToInr).toFixed(2) + "</td><td class='currencyColumn'>Chinese Yuan</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(eurToInr).toFixed(2) + "</td><td class='currencyColumn'>Euro</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(gbpToInr).toFixed(2) + "</td><td class='currencyColumn'>British Pound</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(usdToInr).toFixed(2) + "</td><td class='currencyColumn'>US Dollar</td></tr>")
+            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(zarToInr).toFixed(2) + "</td><td class='currencyColumn'>South African Rand</td></tr>");
     };
 
     var renderMoney = function () {

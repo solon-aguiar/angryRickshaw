@@ -2,15 +2,6 @@
     width: 800px;
 }
 
-#otherCurrency ul, #otherToInr ul, #indianRupee ul, #inrToOther ul, #equalColumn1 ul, #equalColumn2 ul{
-    padding-left: 0px;
-    list-style: none;
-}
-
-li {
-    margin-bottom: 3px;
-}
-
 #amount {
     width: 600px;
     height: 50px;
@@ -31,9 +22,20 @@ li {
     text-align: center;
 }
 
-#exchange-container div ul {
-    display: block;
+table {
+    width: 100%;
+}
+
+table tr td {
+    text-align: right;
+}
+
+.currencyColumn {
     text-align: left;
+}
+
+.valueColumn {
+    font-weight: bold;
 }
 
 .custom-row div {
