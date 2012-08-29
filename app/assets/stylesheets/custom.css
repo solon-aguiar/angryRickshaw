@@ -6,6 +6,18 @@ body {
 
 .thumb a:hover {
     color: #ffffff;
+    text-decoration: none;
+}
+
+.thumb a h2 {
+    margin-left: 20px;
+}
+
+.thumb a p {
+    margin: 20px 20px 20px 20px;
+    min-height: 40px; 
+    text-align: justify; 
+    text-justify: inter-word;
 }
 
 .map-thumb {
@@ -62,7 +74,8 @@ section {
     font-size: 42pt;
 }
 
-.main-logo:hover {
-    border: solid 1px lightgray;
-    box-shadow: 5px 5px 5px 0px lightgray;
+.main-section:hover {
+    text-decoration: none;
+    background-color: #ffffff;
 }
+
