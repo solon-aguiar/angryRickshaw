@@ -80,24 +80,24 @@ $(document).ready(function () {
         }
     };
 
-    var getOtherToRupeesRow = function (nat) {
-        return "<tr><td>" + nat.currencyName + "</td><td>=</td>" +
+	var renderFromRupee = function () {
+		var table = $("#rupeesToOther").html("");
+		for (var i in nationalities) {
+			table.append(getRupeesToOtherRow(nationalities[i]));
+		}
+	};
+
+	var getOtherToRupeesRow = function (nat) {
+		return "<tr><td>" + nat.currencyName + "</td><td>=</td>" +
                "<td class='valueColumn'>" + toRupee(nat.currencyRate).toFixed(2) + "</td>" +
-               "<td class='currencyColumn'> Indian Rupee</td></tr>";
-    };
+               "<td class='currencyColumn'>Indian Rupee</td></tr>";
+	};
 
-    var renderFromRupee = function () {
-
-        $("#rupeesToOther").html("")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(audToInr).toFixed(2) + "</td><td class='currencyColumn'>Australian Dollars</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(brlToInr).toFixed(2) + "</td><td class='currencyColumn'>Brazilian Real</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(cadToInr).toFixed(2) + "</td><td class='currencyColumn'>Canadian Dollar</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(cnyToInr).toFixed(2) + "</td><td class='currencyColumn'>Chinese Yuan</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(eurToInr).toFixed(2) + "</td><td class='currencyColumn'>Euro</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(gbpToInr).toFixed(2) + "</td><td class='currencyColumn'>British Pound</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(usdToInr).toFixed(2) + "</td><td class='currencyColumn'>US Dollar</td></tr>")
-            .append("<tr><td>Indian Rupee</td><td>=</td><td class='valueColumn'>" + fromRupee(zarToInr).toFixed(2) + "</td><td class='currencyColumn'>South African Rand</td></tr>");
-    };
+	var getRupeesToOtherRow = function (nat) {
+		return "<tr><td>Indian Rupee</td><td>=</td>" +
+               "<td class='valueColumn'>" + fromRupee(nat.currencyRate).toFixed(2) + "</td>" +
+               "<td class='currencyColumn'>" + nat.currencyName + "</td></tr>";
+	};
 
     var renderMoney = function () {
         $(".note").hide();
