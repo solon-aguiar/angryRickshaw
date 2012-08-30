@@ -24,10 +24,16 @@
 
 table {
     width: 100%;
+    border: 1px solid #d3d3d3;
+    background-color: #d3d3d3;
 }
 
 table tr td {
     text-align: right;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #a9a9a9;
 }
 
 .currencyColumn {
@@ -35,6 +41,7 @@ table tr td {
 }
 
 .valueColumn {
+    text-align: center;
     font-weight: bold;
 }
 
