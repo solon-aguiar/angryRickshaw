@@ -9,8 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
- *= require currency
  *= require bootstrap
+ *= require currency
  *= require custom
+ *= require_tree .
  */
