@@ -1,7 +1,5 @@
 AngryRickshaw::Application.routes.draw do
 
-  resources :locations
-
   root to: "home#home"
   match "/map", to: "map#map"
   match "/currency", to: "currency_exchange#currencyExchange"
