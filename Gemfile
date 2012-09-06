@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'jquery-rails', '2.0.2'
+gem 'bootstrap-sass', '2.1.0.0'
 gem 'geocoder', '1.1.3'
 gem 'gmaps4rails', '1.5.5'
 
