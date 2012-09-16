@@ -8,10 +8,10 @@
 
 c1 = Category.create(name: "Shopping")
 c2 = Category.create(name: "Restaurant")
-Location.create(name: "Commercial Street", description: "It's a commercial street", picture: "http://www.placehold.it/150x150", address: "Commercial St", latitude: -54.647759, longitude: 20.443505, category: c1)
-Location.create(name: "UB City Mall", description: "It's a fancy mall", picture: "http://www.placehold.it/150x150", address: "MG Road", latitude: -44.647759, longitude: 20.443505, category: c1)
-Location.create(name: "Java", description: "The worst service ever", picture: "http://www.placehold.it/150x150", address: "Diamond District", latitude: -34.647759, longitude: 20.443505, category: c2)
-Location.create(name: "BBQ Nation", description: "It's a good place to eat spicy meat", picture: "http://www.placehold.it/150x150", address: "100 Feat Road", latitude: -24.647759, longitude: 20.443505, category: c2)
+Location.create(name: "Commercial Street", description: "It's a commercial street", picture: "http://www.placehold.it/150x150", address: "Commercial St", latitude: 12.9819369, longitude: 77.6089657, category: c1)
+Location.create(name: "UB City Mall", description: "It's a fancy mall", picture: "http://www.placehold.it/150x150", address: "MG Road", latitude: 12.9715987, longitude: 12.9715987, category: c1)
+Location.create(name: "Java Restaurant", description: "The worst service ever", picture: "http://www.placehold.it/150x150", address: "Diamond District", latitude: 12.9589757, longitude: 77.64416109, category: c2)
+Location.create(name: "Barbeque Nation", description: "It's a good place to eat spicy meat", picture: "http://www.placehold.it/150x150", address: "100 Feat Road", latitude: 12.9619782, longitude: 77.6413672, category: c2)
 
 
 
