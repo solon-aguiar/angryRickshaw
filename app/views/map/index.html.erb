@@ -13,7 +13,7 @@
 			<% @locations.each do |loc| %>
 				<li class="thumbnail">
 					<div class="span7">
-						<img src="<%= imageMap(loc.latitude, loc.longitude, 13) %>">
+						<img src="<%= image_map(loc.latitude, loc.longitude) %>">
 					</div>
 					<div class="span5 location-text">
 						<h2><%= loc.name %></h2>
