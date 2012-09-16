@@ -1,8 +1,8 @@
 AngryRickshaw::Application.routes.draw do
 
 	root to: "home#home"
-	match "/map", to: "map#index", :as => "map"
-	match "/map/:category", to: "map#index", :as => "location_map"
+	match "/map", to: "map#map", :as => "map"
+	match "/map/:category", to: "map#map", :as => "location_map"
 	match "/currency", to: "currency_exchange#currencyExchange"
 	match "/activities", to: "activity#activities"
 	match "/activity/:id", to: "activity#activity"
@@ -57,8 +57,8 @@ AngryRickshaw::Application.routes.draw do
 	#   end
 
 	# You can have the root of your site routed with "root"
-	# just remember to delete public/index.html.
-	# root :to => 'welcome#index'
+	# just remember to delete public/map.html.
+	# root :to => 'welcome#map'
 
 	# See how all your routes lay out with "rake routes"
 

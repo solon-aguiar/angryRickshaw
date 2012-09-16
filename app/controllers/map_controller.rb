@@ -6,7 +6,7 @@ class MapController < ApplicationController
 		@categories = Category.order(:name).all
 	end
 
-	def index
+	def map
 		if params[:category]
 			@locations = Location.order(:name).find_all_by_category_id(params[:category])
 		else
