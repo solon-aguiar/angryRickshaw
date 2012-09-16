@@ -3,7 +3,7 @@ class MapController < ApplicationController
 	before_filter :get_categories
 
 	def get_categories
-		@categories = Category.order(:name).all
+		@categories = Category.all
 	end
 
 	def map
