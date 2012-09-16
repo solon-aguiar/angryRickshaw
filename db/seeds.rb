@@ -6,6 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+c1 = Category.create(name: "Shopping")
+c2 = Category.create(name: "Restaurant")
+Location.create(name: "Commercial Street", description: "It's a commercial street", picture: "http://www.placehold.it/150x150", address: "Commercial St", latitude: -54.647759, longitude: 20.443505, category: c1)
+Location.create(name: "UB City Mall", description: "It's a fancy mall", picture: "http://www.placehold.it/150x150", address: "MG Road", latitude: -44.647759, longitude: 20.443505, category: c1)
+Location.create(name: "Java", description: "The worst service ever", picture: "http://www.placehold.it/150x150", address: "Diamond District", latitude: -34.647759, longitude: 20.443505, category: c2)
+Location.create(name: "BBQ Nation", description: "It's a good place to eat spicy meat", picture: "http://www.placehold.it/150x150", address: "100 Feat Road", latitude: -24.647759, longitude: 20.443505, category: c2)
+
+
+
 Activity.create(name: "Java", category: "Restaurant", description: "Test", location: "Diamond District", rating: 1)
 Activity.create(name: "China Pearl", category: "Restaurant", description: "Test", location: "100 Feet Road", rating: 4)
 Activity.create(name: "Toits", category: "Restaurant", description: "Test", location: "100 Feet Road", rating: 5)

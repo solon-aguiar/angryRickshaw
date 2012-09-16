@@ -1,0 +1,27 @@
+<li class="span12">
+	<section id="mapPageSection">
+		<h2 id="mapPageTitle">Map</h2>
+
+		<ul id="mapMenu" class="nav nav-tabs">
+			<% @categories.each do |cat| %>
+				<li>
+					<%= link_to cat.name, location_map_path(cat, :anchor => "mapPageTitle") %>
+				</li>
+			<% end %>
+		</ul>
+		<ul id="mapLocations" class="row-fluid thumbnails">
+			<% @locations.each do |loc| %>
+				<li class="thumbnail">
+					<div class="span7">
+						<img src="<%= imageMap(loc.latitude, loc.longitude, 13) %>">
+					</div>
+					<div class="span5 location-text">
+						<h2><%= loc.name %></h2>
+						<h5><%= loc.category.name %></h5>
+						<p><%= loc.description %></p>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</section>
+</li>

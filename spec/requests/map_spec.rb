@@ -1,25 +1,23 @@
 require "spec_helper"
 
-describe "Map page." do
+describe "Map page" do
 
-	describe "The main structure" do
+	subject { page }
 
-		it "should have the title" do
-			visit '/map'
-			page.should have_selector('h2', :text => 'Map')
-		end
-
-		it "should have the location types section" do
-			visit '/map'
-			page.should have_selector('div.tabbable.tabs-left')
-			page.should have_selector('ul.nav.nav-tabs')
-		end
-
-		it "should have the location content section" do
-			visit '/map'
-			page.should have_selector('div.tab-content')
-			page.should have_selector('div.tab-pane')
-			page.should have_selector('ul.locations')
-		end
+	describe "without parameter should have the main structure" do
+		before { visit map_path }
+		it { should have_selector('h1', :text => 'Angry Rickshaw') }
+		it { should have_selector('h2#mapPageTitle', :text => 'Map') }
 	end
+
+	describe "should have the title when a parameter is used" do
+		let(:category) { FactoryGirl.create(:category) }
+		before { visit location_map_path(:category) }
+
+		it { should have_selector('h1', :text => 'Angry Rickshaw') }
+		it { should have_selector('h2#mapPageTitle', :text => 'Map') }
+		it { should have_selector('ul#mapMenu') }
+		it { should have_selector('ul#mapLocations') }
+	end
+
 end
