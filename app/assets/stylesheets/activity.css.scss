@@ -1,34 +1,21 @@
 // Place all the styles related to the Activity controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#activityText {
-  width: 600px;
-  height: 50px;
-  font-size: 20pt;
-  text-align: center;
-  z-index: 999;
+
+#activityPageSection {
+	background-color: white;
+	padding-right: 50px;
 }
 
-#activitiesTable {
-  td, th {
-    width: 250px;
-    height: 80px;
-    background-color: #57CDFA;
-  }
+#activityLocations li {
+	width: 100%;
+}
 
-  th {
-    color: white;
-    font-size: 20pt;
-    text-align: left;
-    vertical-align: top;
-    text-indent: 10px;
-    padding-top: 10px;
-  }
+ul {
+	list-style: none;
+}
 
-  td {
-    font-size: 15pt;
-    text-indent: 10px;
-  }
-
-  border-spacing: 10px;
+.location-text {
+	padding-right: 10px;
+	text-align: justify;
 }

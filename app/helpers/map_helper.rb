@@ -1,3 +1,2 @@
 module MapHelper
-
 end

@@ -2,6 +2,7 @@ class Location < ActiveRecord::Base
 	attr_accessible :address, :description, :latitude, :longitude, :name, :picture, :category
 
 	belongs_to :category
+	has_many :activity
 
 	validates :name, presence: true
 	validates :category_id, presence: true

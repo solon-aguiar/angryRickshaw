@@ -3,7 +3,7 @@ FactoryGirl.define do
 		id 0
 		name "Default Category"
 	end
-
+	
 	factory :location do
 		name "Test Location"
 		description "Test Location Description"
@@ -13,5 +13,10 @@ FactoryGirl.define do
 		longitude 20.443505
 
 		association :category
+	end
+
+	factory :activity do
+		name "Test Activity"
+		association :location
 	end
 end

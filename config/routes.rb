@@ -1,10 +1,14 @@
 AngryRickshaw::Application.routes.draw do
 
 	root to: "home#home"
+
 	match "/map", to: "map#map", :as => "map"
-	match "/map/:category", to: "map#map", :as => "location_map"
+
 	match "/currency", to: "currency_exchange#currencyExchange"
-	match "/activities", to: "activity#activities"
+
+	match "/activities", to: "activity#activities", :as => "activities"
+	match "/activities/:category", to: "activity#activities", :as => "activity_map"
+
 	match "/activity/:id", to: "activity#activity"
 	match "/about", to: "about#about"
 
