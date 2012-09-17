@@ -1,14 +1,13 @@
 class ActivityController < ApplicationController
-  def activities
-    @activities = Activity.order("category").all
-  end
 
-  def activity
-    if Activity.exists?(params[:id])
-      @activity = Activity.find(params[:id])
-    else
-      redirect_to activities_path
-    end
+	def activities
 
-  end
+		@categories = Category.all
+
+		if params[:category]
+			@activities = Activity.includes(:location).where("locations.category_id = ?", params[:category])
+		else
+			@activities = Activity.includes(:location).where("locations.category_id = ?", @categories.first)
+		end
+	end
 end

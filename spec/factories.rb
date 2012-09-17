@@ -14,4 +14,9 @@ FactoryGirl.define do
 
 		association :category
 	end
+
+	factory :activity do
+		name "Test Activity"
+		association :location
+	end
 end

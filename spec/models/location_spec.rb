@@ -16,6 +16,7 @@ describe Location do
 	it { should be_valid }
 
 	it { should belong_to(:category) }
+	it { should have_many(:activity) }
 
 	describe "when name isn't present" do
 		before { @location.name = " " }
