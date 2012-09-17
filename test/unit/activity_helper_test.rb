@@ -1,8 +1,8 @@
 require "test_helper"
 
-class MapHelperTest < ActiveSupport::TestCase
+class ActivityHelperTest < ActiveSupport::TestCase
 
-	include MapHelper
+	include ActivityHelper
 
 	test "image of map url" do
 		expected_url = "http://maps.google.com/maps/api/staticmap?center=1,2&zoom=16&size=450x250&markers=color:red%7Clabel:%7C1,2&sensor=false"
