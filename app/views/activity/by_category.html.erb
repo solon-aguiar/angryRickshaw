@@ -5,7 +5,7 @@
 		<ul id="activityMenu" class="nav nav-tabs">
 			<% @categories.each do |cat| %>
 				<li>
-					<%= link_to cat.name, activity_map_path(cat, :anchor => "activityPageTitle") %>
+					<%= link_to cat.name, activity_by_category_path(cat, :anchor => "activityPageTitle") %>
 				</li>
 			<% end %>
 		</ul>
@@ -19,6 +19,8 @@
 						<h2><%= act.location.name %></h2>
 						<h5><%= act.location.category.name %></h5>
 						<p><%= act.location.description %></p>
+						<hr class="activity-row"/>
+						<%= link_to "Get Directions", gmaps_url(act.location.latitude, act.location.longitude), :class => "btn btn-primary", :target => "_blank" %>
 					</div>
 				</li>
 			<% end %>

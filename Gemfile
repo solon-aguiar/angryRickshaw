@@ -5,13 +5,14 @@ gem 'jquery-rails', '2.0.2'
 gem 'bootstrap-sass', '2.1.0.0'
 gem 'geocoder', '1.1.3'
 gem 'gmaps4rails', '1.5.5'
-gem 'schema_plus', '0.4.1'
 
 group :development, :test do
 	gem 'sqlite3', '1.3.6'
 	gem 'rspec-rails', '2.10.0'
 	gem 'nifty-generators', '0.4.6'
 	gem 'shoulda', '3.1.1', require: false
+	gem 'schema_plus', '0.4.1'
+	gem 'pry', '0.9.10', require: false
 end
 
 # Gems used only for assets and not required
