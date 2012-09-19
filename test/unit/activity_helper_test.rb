@@ -12,4 +12,9 @@ class ActivityHelperTest < ActiveSupport::TestCase
 	test "active tab" do
 		pending "active_tab.should be(0)"
 	end
+
+	test "google maps generated url" do
+		expected_url = "https://maps.google.com/maps?q=1,2"
+		assert_equal expected_url, gmaps_url(1, 2)
+	end
 end

@@ -14,4 +14,8 @@ module ActivityHelper
 		end
 		tab_number
 	end
+
+	def gmaps_url(latitude, longitude)
+		"https://maps.google.com/maps?q=#{latitude},#{longitude}"
+	end
 end
