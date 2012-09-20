@@ -14,7 +14,14 @@ class ActivityHelperTest < ActiveSupport::TestCase
 	end
 
 	test "google maps generated url" do
-		expected_url = "https://maps.google.com/maps?q=1,2"
-		assert_equal expected_url, gmaps_url(1, 2)
+		expected_url = "http://maps.google.com/maps?q=Test+Location,+Test+Address&ll=1.0,2.0"
+		location = FactoryGirl.create(:location)
+
+		assert_equal expected_url, gmaps_url(location)
+	end
+
+	test "transform address string replacing spaces by +" do
+		expected = "some+string+without+spaces"
+		assert_equal expected, transform_string("some string without spaces")
 	end
 end

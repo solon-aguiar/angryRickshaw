@@ -15,7 +15,11 @@ module ActivityHelper
 		tab_number
 	end
 
-	def gmaps_url(latitude, longitude)
-		"https://maps.google.com/maps?q=#{latitude},#{longitude}"
+	def gmaps_url(location)
+		"http://maps.google.com/maps?q=#{transform_string(location.name)},+#{transform_string(location.address)}&ll=#{location.latitude},#{location.longitude}"
+	end
+
+	def transform_string(address)
+		address.gsub(" ", "+")
 	end
 end
