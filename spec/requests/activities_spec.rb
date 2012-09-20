@@ -1,6 +1,8 @@
 require 'spec_helper'
 
-describe "Activities" do
+describe Activity do
+
+	include ActivityHelper
 
 	subject { page }
 
@@ -18,15 +20,24 @@ describe "Activities" do
 			it "has a link redirecting to google maps" do
 				should have_selector('a.btn', :text => 'Get Directions')
 			end
+			it "has a link to get more activity details" do
+				should have_selector('a.btn', :text => 'More Details')
+			end
 		end
-
-
 	end
 
 	describe "links point the right places" do
+		FIRST_CATEGORY_ID = 1
+		location = Location.find_by_category_id(FIRST_CATEGORY_ID)
+		activity = Activity.find_by_location_id(location)
+		before { visit all_activity_path }
+
 		it "has the correct google maps link" do
-			visit all_activity_path
-			find_link("Get Directions")[:href].should =~ /http:\/\/maps.google.com\/maps\?q=[\S]*&ll=\d+\.?\d*,\d+\.?\d*/
+			find_link("Get Directions")[:href].should == gmaps_url(activity.location)
+		end
+
+		it "has the correct details link" do
+			find_link("More Details")[:href].should == activity_path(activity)
 		end
 	end
 end
