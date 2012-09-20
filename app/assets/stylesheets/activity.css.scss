@@ -9,6 +9,10 @@
 
 #activityLocations li {
 	width: 100%;
+
+	.span5 {
+		padding-right: 10px;
+	}
 }
 
 ul {
@@ -20,6 +24,6 @@ hr.activity-row {
 }
 
 .location-text {
-	padding-right: 10px;
+	min-height: 160px;
 	text-align: justify;
 }

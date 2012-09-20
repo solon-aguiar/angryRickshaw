@@ -15,12 +15,16 @@
 					<div class="span7">
 						<img src="<%= image_map(act.location.latitude, act.location.longitude) %>">
 					</div>
-					<div class="span5 location-text">
-						<h2><%= act.location.name %></h2>
-						<h5><%= act.location.category.name %></h5>
-						<p><%= act.location.description %></p>
-						<hr class="activity-row"/>
-						<%= link_to "Get Directions", gmaps_url(act.location.latitude, act.location.longitude), :class => "btn btn-primary", :target => "_blank" %>
+					<div class="span5">
+						<div class="location-text">
+							<h2><%= act.location.name %></h2>
+							<h5><%= act.location.category.name %></h5>
+							<p><%= act.location.description %></p>
+						</div>
+						<div>
+							<hr class="activity-row" />
+							<%= link_to "Get Directions", gmaps_url(act.location.latitude, act.location.longitude), :class => "btn btn-primary", :target => "_blank" %>
+						</div>
 					</div>
 				</li>
 			<% end %>
