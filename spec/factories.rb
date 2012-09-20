@@ -7,10 +7,10 @@ FactoryGirl.define do
 	factory :location do
 		name "Test Location"
 		description "Test Location Description"
-		picture "http://www.valordoiptu.com/wp-content/uploads/2012/01/campo-grande1.jpg"
+		picture "http://www.placehold.it/450x250"
 		address "Test Address"
-		latitude -54.647759
-		longitude 20.443505
+		latitude 1.0
+		longitude 2.0
 
 		association :category
 	end
