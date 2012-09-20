@@ -10,4 +10,4 @@ before_install:
 before_script:
   - "rake db:reset"
 
-script: rake test
+script: rake test && rake
