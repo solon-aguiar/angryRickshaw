@@ -151,11 +151,6 @@ a:hover {
     text-decoration: underline
 }
 
-.img-rounded {
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px
-}
 
 .img-polaroid {
     padding: 4px;
@@ -168,9 +163,7 @@ a:hover {
 }
 
 .img-circle {
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px
+
 }
 
 .row {
