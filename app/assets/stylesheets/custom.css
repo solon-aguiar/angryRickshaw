@@ -24,7 +24,6 @@ body {
     color: #87ceeb;
     background-color: #1e90ff;
 }
-
 .map-thumb:hover {
     background-color: #00bfff;
 }
@@ -33,7 +32,6 @@ body {
     color: #2e8b57;
     background-color: #006400;
 }
-
 .about-thumb:hover {
     background-color: #32cd32;
 }
@@ -42,7 +40,6 @@ body {
     color: #ff69b4;
     background-color: #c71585;
 }
-
 .currency-thumb:hover {
     background-color: #ff00ff;
 }
@@ -51,7 +48,6 @@ body {
     color: #a9a9a9;
     background-color: orange;
 }
-
 .activities-thumb:hover {
     background-color: #ffd700;
 }
@@ -73,7 +69,6 @@ section {
 .main-section h1 {
     font-size: 42pt;
 }
-
 .main-section:hover {
     text-decoration: none;
     background-color: #ffffff;
