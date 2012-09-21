@@ -26,20 +26,24 @@ describe "Activity" do
 					should have_selector('a.btn', :text => 'More Details')
 				end
 				it "it has the short description being shown" do
-					description_of_first_activity_shown = activities(:activity_1).location.description
-					should have_selector('div.location-text p', :text => short_description(description_of_first_activity_shown))
+					should have_selector('div.location-text p', :text => short_description(activities(:first_displayed).location.description))
 				end
 			end
 		end
 
 		describe "links should point the right places" do
 			it "has the correct google maps link" do
-				find_link("Get Directions")[:href].should == gmaps_url(activities(:activity_1).location)
+				find_link("Get Directions")[:href].should == gmaps_url(activities(:first_displayed).location)
 			end
 
 			it "has the correct details link" do
-				find_link("More Details")[:href].should == activity_path(activities(:activity_1))
+				find_link("More Details")[:href].should == activity_path(activities(:first_displayed))
 			end
+		end
+
+		describe "should redirect to 404 page when none existent parameter is passed" do
+			before { visit activity_by_category_path(0) }
+			it { should have_selector('h2#error404Title', :text => 'The page you were looking for doesn\'t exist') }
 		end
 	end
 
