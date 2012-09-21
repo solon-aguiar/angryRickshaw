@@ -22,4 +22,13 @@ module ActivityHelper
 	def transform_string(address)
 		address.gsub(" ", "+")
 	end
+
+	def short_description(description)
+		desc_returned = description
+		if description.size >= 200
+			desc_returned = description[0,197] << "..."
+		end
+
+		desc_returned
+	end
 end
