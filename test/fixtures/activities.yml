@@ -1,0 +1,14 @@
+activity_1:
+   id: 1
+   name: Category 1
+   location_id: 1
+
+activity_2:
+   id: 2
+   name: Category 2
+   location_id: 2
+
+activity_3:
+   id: 3
+   name: Category 1
+   location_id: 3
