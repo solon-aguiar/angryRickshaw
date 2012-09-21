@@ -1,12 +1,6 @@
 require 'spec_helper'
 
-def first_activity_shown
-	first_category_id = 1
-	location = Location.find_by_category_id(first_category_id)
-	Activity.find_by_location_id(location)
-end
-
-describe Activity do
+describe "Activity" do
 
 	include ActivityHelper
 
@@ -32,21 +26,19 @@ describe Activity do
 					should have_selector('a.btn', :text => 'More Details')
 				end
 				it "it has the short description being shown" do
-					activity = first_activity_shown()
-					should have_selector('div.location-text p', :text => short_description(activity.location.description))
+					description_of_first_activity_shown = activities(:activity_1).location.description
+					should have_selector('div.location-text p', :text => short_description(description_of_first_activity_shown))
 				end
 			end
 		end
 
 		describe "links should point the right places" do
-			activity = first_activity_shown()
-
 			it "has the correct google maps link" do
-				find_link("Get Directions")[:href].should == gmaps_url(activity.location)
+				find_link("Get Directions")[:href].should == gmaps_url(activities(:activity_1).location)
 			end
 
 			it "has the correct details link" do
-				find_link("More Details")[:href].should == activity_path(activity)
+				find_link("More Details")[:href].should == activity_path(activities(:activity_1))
 			end
 		end
 	end

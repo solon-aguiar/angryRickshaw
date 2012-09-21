@@ -1,0 +1,29 @@
+default_1:
+   id: 1
+   name: Default Location 1
+   description: It' a normal, regular and not interesting location
+   picture: http://www.placehold.it/450x250
+   address: Regular St, 100, Normal City
+   latitude: 2.0
+   longitude: 4.0
+   category_id: 1
+
+default_2:
+   id: 2
+   name: Default Location 2
+   description: It's another normal, regular and not interesting location. Maybe more interesting than default 1
+   picture: http://www.placehold.it/450x250
+   address: Regular St, 190, Normal City
+   latitude: 2.0
+   longitude: 4.00090
+   category_id: 2
+
+long_description:
+   id: 3
+   name: Location with a long description
+   description: <%= "a" * 250 %>
+   picture: http://www.placehold.it/450x250
+   address: Regular St, 190, Normal City
+   latitude: 1.0
+   longitude: 2.0
+   category_id: 1

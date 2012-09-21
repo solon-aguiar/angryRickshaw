@@ -10,8 +10,6 @@ class ActivityController < ApplicationController
 		if params[:category]
 			@activities = Activity.includes(:location).where("locations.category_id = ?", params[:category])
 		end
-
-		render_404 if @activities.empty?
 	end
 
 	def create
@@ -41,11 +39,4 @@ class ActivityController < ApplicationController
 	def get_categories
 		@categories = Category.all
 	end
-
-	def render_404
-		respond_to do |format|
-			format.html { render :file => "#{Rails.root}/public/404", :formats => [:html], :status => 404 }
-		end
-	end
-
 end
