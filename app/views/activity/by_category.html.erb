@@ -1,11 +1,11 @@
 <li class="span12">
-	<section id="activityPageSection">
-		<h2 id="activityPageTitle">Activities</h2>
+	<section id="activitiesPageSection">
+		<h2 id="activitiesPageTitle">Activities</h2>
 
-		<ul id="activityMenu" class="nav nav-tabs">
+		<ul id="activitiesMenu" class="nav nav-tabs">
 			<% @categories.each do |cat| %>
 				<li>
-					<%= link_to cat.name, activity_by_category_path(cat, :anchor => "activityPageTitle") %>
+					<%= link_to cat.name, activity_by_category_path(cat, :anchor => "activitiesPageTitle") %>
 				</li>
 			<% end %>
 		</ul>
@@ -32,6 +32,6 @@
 		</ul>
 	</section>
 	<script type="text/javascript">
-		$('#activityMenu li:eq(<%= active_tab %>) a').tab('show');
+		$('#activitiesMenu li:eq(<%= active_tab %>) a').tab('show');
 	</script>
 </li>
