@@ -5,8 +5,8 @@ class ActivityHelperTest < ActiveSupport::TestCase
 	include ActivityHelper
 
 	test "google maps image url of the list of activities" do
-		expected_url = "http://maps.google.com/maps/api/staticmap?center=1,2&zoom=16&size=450x250&markers=color:red%7Clabel:%7C1,2&sensor=false"
-		assert_equal expected_url, image_map(1, 2)
+		expected_url = "http://maps.google.com/maps/api/staticmap?center=1.0,2.0&zoom=16&size=450x250&markers=color:red%7Clabel:%7C1.0,2.0&sensor=false"
+		assert_equal expected_url, image_map(FactoryGirl.create(:location))
 	end
 
 	test "active tab" do

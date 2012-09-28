@@ -1,10 +1,10 @@
 module ActivityHelper
-	def image_map(latitude, longitude)
+	def image_map(location)
 		zoom = 16
 		marker_color = "red"
 		map_width = 450
 		map_height = 250
-		"http://maps.google.com/maps/api/staticmap?center=#{latitude},#{longitude}&zoom=#{zoom}&size=#{map_width}x#{map_height}&markers=color:#{marker_color}%7Clabel:%7C#{latitude},#{longitude}&sensor=false"
+		"http://maps.google.com/maps/api/staticmap?center=#{location.latitude},#{location.longitude}&zoom=#{zoom}&size=#{map_width}x#{map_height}&markers=color:#{marker_color}%7Clabel:%7C#{location.latitude},#{location.longitude}&sensor=false"
 	end
 
 	def active_tab

@@ -27,15 +27,20 @@ describe "Activity" do
 	end
 
 	describe "Activity Show page" do
+		before { visit activity_path(categories(:category_1)) }
 
 		describe "should have the main structure" do
-			before { visit activity_path(categories(:category_1)) }
 			it { should have_selector('h1', :text => 'Angry Rickshaw') }
 			it { should have_selector('h2#activityName', :text => 'Default Location 1')}
 			it { should have_selector('h5#activityCategory', :text => 'Category 1')}
 			it { should have_selector('p#activityDescription', :text => 'It\'s a normal, regular and not interesting location')}
 			it { should have_selector('img#activityMap')}
 			it { should have_selector('img#activityPhoto')}
+		end
+
+		describe "links should point the right places" do
+			it { find_link("More #{categories(:category_1).name}")[:href].should == activity_by_category_path(categories(:category_1)) }
+			it { find_link("All Categories")[:href].should == all_activity_path }
 		end
 
 		describe "should redirect to 404 page when none existent parameter is passed" do
