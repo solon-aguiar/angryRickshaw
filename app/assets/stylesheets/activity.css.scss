@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#activityPageSection {
+#activitiesPageSection {
 	background-color: white;
 	padding-right: 50px;
 }
@@ -13,6 +13,20 @@
 	.span5 {
 		padding-right: 10px;
 	}
+}
+
+#activityPhoto {
+	float: right;
+	height: 150px;
+	width: 150px;
+}
+
+#activityMap {
+	margin-top: 40px;
+}
+
+#activityPictures {
+	max-height: 250px;
 }
 
 ul {

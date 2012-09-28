@@ -1,0 +1,16 @@
+<li class="span12">
+	<section id="activityPageSection">
+		<ul class="row">
+			<li id="activityInfo" class="span6">
+				<h2 id="activityName"><%= @activity.location.name %></h2>
+				<img id="activityPhoto" src="<%= @activity.location.picture %>">
+				<h5 id="activityCategory"><%= @activity.name %></h5>
+				<p id="activityDescription"><%= @activity.location.description %></p>
+				<img id="activityMap" src="<%= image_map(@activity.location.latitude, @activity.location.longitude) %>">
+			</li>
+			<li id="activityComments" class="span5">
+				<h5 id="commentsTitle">Comments</h5>
+			</li>
+		</ul>
+	</section>
+</li>

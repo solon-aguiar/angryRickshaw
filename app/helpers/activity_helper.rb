@@ -24,7 +24,7 @@ module ActivityHelper
 	end
 
 	def short_description(description)
-		desc_returned = description
+		desc_returned = description.dup
 		if description.size >= 200
 			desc_returned = description[0,197] << "..."
 		end
