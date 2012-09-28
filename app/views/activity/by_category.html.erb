@@ -13,7 +13,7 @@
 			<% @activities.each do |act| %>
 				<li class="thumbnail">
 					<div class="span7">
-						<img src="<%= image_map(act.location.latitude, act.location.longitude) %>">
+						<img src="<%= image_map(act.location) %>">
 					</div>
 					<div class="span5">
 						<div class="location-text">

@@ -2,14 +2,23 @@
 	<section id="activityPageSection">
 		<ul class="row">
 			<li id="activityInfo" class="span6">
-				<h2 id="activityName"><%= @activity.location.name %></h2>
-				<img id="activityPhoto" src="<%= @activity.location.picture %>">
-				<h5 id="activityCategory"><%= @activity.name %></h5>
-				<p id="activityDescription"><%= @activity.location.description %></p>
-				<img id="activityMap" src="<%= image_map(@activity.location.latitude, @activity.location.longitude) %>">
+				<div class="location-text">
+					<%= image_tag(@activity.location.picture, :id => 'activityPhoto') %>
+					<h2 id="activityName"><%= @activity.location.name %></h2>
+					<h5 id="activityCategory"><%= @activity.name %></h5>
+					<p id="activityDescription"><%= @activity.location.description %></p>
+				</div>
+				<div style="text-align: right;">
+					<hr class="activity-row" />
+					<% category = @activity.location.category %>
+					<%= link_to "More #{category.name}", activity_by_category_path(category), :class => "btn" %>
+					<%= link_to "All Categories", all_activity_path, :class => "btn" %>
+				</div>
 			</li>
-			<li id="activityComments" class="span5">
-				<h5 id="commentsTitle">Comments</h5>
+			<li class="span5">
+				<%= link_to gmaps_url(@activity.location) do %>
+					<%= image_tag(image_map(@activity.location), :id => 'activityMap' ) %>
+				<% end %>
 			</li>
 		</ul>
 	</section>
