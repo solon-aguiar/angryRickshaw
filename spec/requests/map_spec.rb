@@ -8,6 +8,7 @@ describe "Map page" do
 		before { visit map_path }
 		it { should have_selector('h1', :text => 'Angry Rickshaw') }
 		it { should have_selector('h2#mapPageTitle', :text => 'Map') }
+		it { should have_selector('title', :text => 'Angry Rickshaw - Map') }
 	end
 
 end

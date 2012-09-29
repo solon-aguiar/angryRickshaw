@@ -12,6 +12,7 @@ describe "Activity" do
 		describe "should have the main structure" do
 			it { "has main title"; should have_selector('h1', :text => 'Angry Rickshaw') }
 			it { "has the subtitle"; should have_selector('h2#activitiesPageTitle', :text => 'Activities')}
+			it { should have_selector('title', :text => 'Angry Rickshaw - Activity') }
 
 			describe "each activity" do
 				it { "has a link redirecting to google maps"; should have_selector('a.btn', :text => 'Get Directions') }
@@ -31,6 +32,7 @@ describe "Activity" do
 
 		describe "should have the main structure" do
 			it { should have_selector('h1', :text => 'Angry Rickshaw') }
+			it { should have_selector('title', :text => 'Angry Rickshaw - Default Location 1') }
 			it { should have_selector('h2#activityName', :text => 'Default Location 1')}
 			it { should have_selector('h5#activityCategory', :text => 'Category 1')}
 			it { should have_selector('p#activityDescription', :text => 'It\'s a normal, regular and not interesting location')}

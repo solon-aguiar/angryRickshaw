@@ -14,6 +14,9 @@ describe "Home page" do
 			it { should have_selector('a.thumbnail h2', :text => 'Currency') }
 		end
 
+		describe "should have the proper title" do
+			it { should have_selector('title', :text => 'Angry Rickshaw') }
+		end
 
 		describe "all links should work properly" do
 			it do
