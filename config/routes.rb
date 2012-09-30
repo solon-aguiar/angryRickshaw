@@ -5,7 +5,7 @@ AngryRickshaw::Application.routes.draw do
 
 	match '/map', to: 'map#map', :as => 'map'
 
-	match '/currency', to: 'currency_exchange#currencyExchange'
+	match '/currency', to: 'currency#currency'
 
 	match '/activity/', to: 'activity#index', :as => 'all_activity'
 	match '/activity/by_category/:category', to: 'activity#by_category', :as => 'activity_by_category'
