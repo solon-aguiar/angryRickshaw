@@ -25,6 +25,14 @@ describe "Activity" do
 			it { "has the correct google maps link"; find_link("Get Directions")[:href].should == gmaps_url(activities(:first_displayed).location) }
 			it { "has the correct details link"; find_link("More Details")[:href].should == activity_path(activities(:first_displayed)) }
 		end
+
+		describe "should redirect to 404 page when none existent category is passed" do
+			before {
+				invalid_category_id = 0
+				visit activity_by_category_path(invalid_category_id)
+			}
+			it { should have_selector('h2#error404Title', :text => 'The page you were looking for doesn\'t exist') }
+		end
 	end
 
 	describe "Activity Show page" do
@@ -45,10 +53,10 @@ describe "Activity" do
 			it { find_link("All Categories")[:href].should == all_activity_path }
 		end
 
-		describe "should redirect to 404 page when none existent parameter is passed" do
+		describe "should redirect to 404 page when none existent activity is passed" do
 			before {
-				invalid_category_id = 0
-				visit activity_by_category_path(invalid_category_id)
+				invalid_activity_id = 0
+				visit activity_path(invalid_activity_id)
 			}
 			it { should have_selector('h2#error404Title', :text => 'The page you were looking for doesn\'t exist') }
 		end

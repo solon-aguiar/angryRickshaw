@@ -13,6 +13,6 @@ AngryRickshaw::Application.routes.draw do
 	match '/about', to: 'about#about'
 
 	# it cares about routing errors, when given URL doesn't exist
-	match '*a', :to => 'errors#routing'
+	match '*a', :to => 'errors#render_404'
 
 end

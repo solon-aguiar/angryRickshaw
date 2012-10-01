@@ -11,7 +11,7 @@ class ActivityController < ApplicationController
 			@activities = Activity.includes(:location).where("locations.category_id = ?", params[:category])
 		end
 
-		render_404?(@activities)
+		render_404 if @activities.nil? || @activities.blank?
 	end
 
 	def create
@@ -29,7 +29,8 @@ class ActivityController < ApplicationController
 	def show
 		@activity = Activity.find(params[:id])
 
-		render_404?(@activity)
+		rescue ActiveRecord::RecordNotFound
+			render_404
 	end
 
 	def update
@@ -44,11 +45,9 @@ class ActivityController < ApplicationController
 		@categories = Category.all
 	end
 
-	def render_404?(subject)
-		if subject.nil? || subject.blank?
-			respond_to do |format|
-				format.html { render :file => "#{Rails.root}/public/404", :formats => [:html], :status => 404 }
-			end
+	def render_404
+		respond_to do |format|
+			format.html { render :file => "#{Rails.root}/public/404", :formats => [:html], :status => 404 }
 		end
 	end
 
