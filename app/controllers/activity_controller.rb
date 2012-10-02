@@ -14,31 +14,11 @@ class ActivityController < ApplicationController
 		render_404 if @activities.nil? || @activities.blank?
 	end
 
-	def create
-
-	end
-
-	def new
-
-	end
-
-	def edit
-
-	end
-
 	def show
 		@activity = Activity.find(params[:id])
 
 		rescue ActiveRecord::RecordNotFound
 			render_404
-	end
-
-	def update
-
-	end
-
-	def destroy
-
 	end
 
 	def get_categories
