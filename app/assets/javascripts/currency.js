@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#amount").val("");
 
     $.ajax({
-        url:"http://openexchangerates.org/latest.json",
+        url:"http://openexchangerates.org/api/latest.json?app_id=c63333aed79942a38c6acf294172b983",
         dataType:"json",
         type:"GET",
         success:function (data) {
